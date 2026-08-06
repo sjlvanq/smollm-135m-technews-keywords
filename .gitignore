@@ -1,0 +1,6 @@
+smollm-135m-technews-kw-02.ggml
+smollm-135m-technews-kw-02-q4_0.gguf
+smollm-135m-technews-kw-02-q4_1.gguf
+smollm-135m-technews-kw-02-q8_0.gguf
+**/model.safetensors
+**/optimizer.pt

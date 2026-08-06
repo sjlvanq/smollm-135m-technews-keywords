@@ -1,0 +1,18 @@
+#FROM ./smollm-135m-technews-kw-02-q4_0.gguf
+#FROM ./smollm-135m-technews-kw-02-q4_1.gguf
+FROM ./smollm-135m-technews-kw-02-q8_0.gguf
+
+TEMPLATE """<|im_start|>system
+Your task is to generate relevant keywords based on the text provided by the user.
+<|im_end|>
+{{ range .Messages }}<|im_start|>{{ .Role }}
+Main terms of: {{ .Content }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
+
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+PARAMETER temperature 0.01
+PARAMETER top_k 25
+PARAMETER repeat_penalty 1.1
+PARAMETER num_predict 23
