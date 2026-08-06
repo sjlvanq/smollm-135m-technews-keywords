@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "Why We Migrated Our Distributed Storage Engine from Go to Rust",
+    "summary": "An architectural deep dive into the performance bottlenecks encountered when scaling a high-throughput key-value store in Go. The article analyzes how stop-the-world garbage collection pauses impacted p99 tail latency and details the memory safety, concurrency primitives, and zero-cost abstractions leveraged during the Rust rewrite to achieve a 40% reduction in resource allocation."
+  },
+  {
+    "id": 2,
+    "title": "Reverse Engineering Proprietary Firmware via Side-Channel Voltage Analysis",
+    "summary": "A technical breakdown detailing the extraction of cryptographic keys from an isolated microcontroller using differential power analysis and fault injection. The post outlines the custom hardware setup utilizing a low-cost oscilloscope, open-source signal processing pipelines, and mitigations for hardware designers against physical tampering."
+  },
+  {
+    "id": 3,
+    "title": "Determining Optical Flow in Embedded Vision Systems Using Sparse Matrices",
+    "summary": "A mathematical formulation and C23 implementation for computing real-time motion vectors on resource-constrained microcontrollers. By replacing dense matrix operations with block-sparse approximations, the proposed algorithm achieves a 120 Hz frame rate on ARM Cortex-M microcontrollers without dedicated hardware acceleration."
+  },
+  {
+    "id": 4,
+    "title": "Post-Mortem: A 4-Hour Global Outage Triggered by BGP Route Flapping",
+    "summary": "An incident analysis of a cascading network failure across multi-region edge locations. The report investigates how a misconfigured autonomous system number (ASN) aggregation rule interacted with downstream route reflectors, causing control plane saturation and subsequent DNS resolution failures across all major points of presence."
+  },
+  {
+    "id": 5,
+    "title": "Formal Verification of a Concurrent Lock-Free Queue in TLA+",
+    "summary": "An exploration of applying formal methods to concurrent data structure design. The author presents a complete TLA+ specification for a multi-producer, multi-consumer queue, proving the absence of deadlocks, race conditions, and ABA problems before generating verified C code using explicit model checking."
+  },
+  {
+    "id": 6,
+    "title": "Implementing Quantized LLM Inference Engines directly in WebAssembly",
+    "summary": "A practical exploration of executing 4-bit quantized transformer models within the browser without WebGPU dependencies. The write-up highlights SIMD optimizations, custom WebAssembly linear algebra kernels, and memory mapping techniques required to maintain sub-second token generation rates on mobile client devices."
+  },
+  {
+    "id": 7,
+    "title": "Query Optimization Strategies for Multi-Tenant Time-Series Databases",
+    "summary": "A study on partition indexing, LSM-tree compaction heuristics, and compression algorithms optimized for high-cardinality telemetry data. The discussion compares columnar storage efficiency, delta-of-delta encoding, and segment skip-indexes under heavy concurrent write loads."
+  },
+  {
+    "id": 8,
+    "title": "Zero-Knowledge Proofs in Practice: Building an Anonymous Credential System",
+    "summary": "A step-by-step implementation guide for an identity verification system based on zk-SNARKs. It details the construction of arithmetic circuits using Circom, setup of trusted setups, and implementation of client-side proof generation to enable authentication without disclosing personally identifiable information."
+  },
+  {
+    "id": 9,
+    "title": "The Evolution of Garbage Collection Algorithms in Modern Runtimes",
+    "summary": "A comparative survey tracing the design trade-offs between generational mark-compact collectors, concurrent tri-color marking, and region-based memory management. The paper evaluates throughput, pause-time guarantees, and cache locality metrics across Java's ZGC, Go's concurrent collector, and V8's Orinoco."
+  },
+  {
+    "id": 10,
+    "title": "Compiling Subsets of Python to eBPF Bytecode for Kernel Observability",
+    "summary": "An introduction to a custom compiler toolchain designed to translate a restricted subset of Python syntax directly into Extended Berkeley Packet Filter (eBPF) bytecode. The post discusses AST parsing, register allocation within kernel verifier constraints, and real-time network packet filtering applications."
+  }
+]

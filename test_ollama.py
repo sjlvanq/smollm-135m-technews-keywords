@@ -1,4 +1,5 @@
 import ollama
+import json
 
 def extract_keywords(source_text):
     try:
@@ -30,6 +31,14 @@ def extract_keywords(source_text):
         return None
 
 if __name__ == '__main__':
-    source_text='Main terms of: The article details the evolution of Apple app icon formats, focusing on the introduction of rounded-square icons on iOS and the recent restriction in macOS to a squircle shape.'
-    print(source_text)
-    extract_keywords(source_text)
+    with open('summaries-for-testing.json', 'r') as f:
+        summaries = json.load(f)
+    
+    for item in summaries:
+        print(f"\n{'='*60}")
+        print(f"ID: {item['id']}")
+        print(f"Title: {item['title']}")
+        print(f"{'='*60}")
+        print(f"Summary: {item['summary']}")
+        print(f"{'='*60}")
+        extract_keywords(item['summary'])
