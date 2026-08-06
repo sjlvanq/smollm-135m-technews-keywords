@@ -4,7 +4,7 @@ echo $user_message
 curl http://localhost:11434/api/chat \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "technews-keywords-extractor-alpha01",
+    "model": "smollm-135m-technews-kw-02-q8_0:latest",
     "messages": [
       {
         "role": "user",
@@ -13,8 +13,8 @@ curl http://localhost:11434/api/chat \
     ],
     "stream": false,
     "options": {
-      "num_predict": 250,
-      "temperature": 0.0
+      "num_predict": 300,
+      "temperature": 0.1
     },
     "format": {
       "type": "object",
@@ -25,8 +25,8 @@ curl http://localhost:11434/api/chat \
             "type": "string"
           },
           "description": "Text keywords/terms identified.",
-	  "minItems": 4,
-	  "maxItems": 4
+	  "minItems": 3,
+	  "maxItems": 5
         }
       },
       "required": ["keywords"]
